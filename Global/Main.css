@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Reset CSS */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+/* Bảng điều khiển */
+:root {
+   --bg: black;
+   --head: #222;
+   --text: rgba(200, 200, 200, 1);
+   --link: rgba(60, 158, 0, 1);
+   --radius: 10px;
+   --pages: rgba(0, 25, 0, 1);
+   --titlecolor: /*linear-gradient(90deg, rgba(92, 101, 198, 0.5), rgba(50, 50, 50, 1))*/ rgba(255, 136, 138, 0.42) ;
+}
+
+/* CSS Chính */
+body {
+  font-family: "Chakra Petch", sans-serif;
+   background: var(--bg);
+   color: var(--text);
+   font-size: 15pt;
+   
+}
+
+a {
+   color: var(--link);
+   text-decoration: none;
+}
+
+#head {
+   width: 100%;
+   padding: 10px;
+   justify-content: space-between;
+   background: var(--titlecolor);
+   position: fixed;
+   /*border-bottom: solid 0.1px rgba(255, 255, 255, 0.5);*/
+   display: flex;
+   top: 0;
+   box-shadow:0px 0px 50px 10px black;
+   border-radius: var(--radius)
+}
+
+.ctn {
+   width: 96%;
+  height: auto;
+  /* border: solid;*/
+   margin: 60px 2% 0px 2%;
+}
+
+#pages {
+  width: 70%;
+  padding: 0px 5px;
+  background: var(--titlecolor);
+  border: solid 0.1px rgba(255, 0, 0, 0.5);
+  border-left: none;
+  margin-bottom: 10px;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  text-align: center;
+  display: flex;
+}
+.avatar {
+  /*aspect-ratio: 1 / 1;*/
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background: black;
+}
+

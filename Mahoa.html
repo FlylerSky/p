@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Chuyển Đổi Chữ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Công Cụ Chuyển Đổi Chữ</h1>
+        <textarea id="inputText" rows="5" placeholder="Nhập văn bản ở đây... &#x0037; Ŵ"></textarea>
+        <button onclick="convertText()">Chuyển Đổi</button>
+        <div class="result" id="resultText"></div>
+    </div>
+
+    <script>
+        function convertText() {
+            const mapping = {
+                'A': 'Y',
+                'B': 'X',
+                'C': 'B',
+                'D': 'Đ',
+                'E': 'A',
+                'F': 'Z',
+                'G': 'C',
+                'H': 'G',
+                'I':'E',
+                'J':'F',
+                'K':'H',
+                'L':'K',
+                'M':'L',
+                'N':'M',
+                'O':'I',
+                'P':'N',
+                'Q':'P',
+                'R':'Q',
+                'S':'R',
+                'T':'S',
+                'U':'O',
+                'V':'T',
+                'W':'J',
+                'X':'V',
+                'Y':'U',
+                'Z':'W',
+                'a': 'y',
+                'b': 'x',
+                'c': 'b',
+                'd': 'đ',
+                'e': 'a',
+                'f': 'z',
+                'g': 'c',
+                'h': 'g',
+                'i': 'e',
+                'j': 'f',
+                'k': 'h',
+                'l': 'k',
+                'm': 'l',
+                'n': 'm',
+                'o': 'i',
+                'p': 'n',
+                'q': 'p',
+                'r': 'q',
+                's': 'r',
+                't': 's',
+                'u': 'o',
+                'v': 't',
+                'w': 'j',
+                'x': 'v',
+                'y': 'u',
+                'z': 'w',
+                'Ă':'Ư',
+                'Â':'Ă',
+                'Đ':'D',
+                'Ê':'Â',
+                'Ô':'Ê',
+                'Ơ':'Ô',
+                'Ư':'Ơ',
+                'ă':'ư',
+                'â':'ă',
+                'đ':'d',
+                'ê':'â',
+                'ô':'ê',
+                'ơ':'ô',
+                'ư':'ơ',
+                'Á' : '',
+                '' : '',               
+                '' : '',
+                '' : '',
+                '' : '',
+                '' : '',
+                
+            };
+
+            const input = document.getElementById('inputText').value;
+            let output = '';
+
+            for (let string of input) {
+                if (mapping[string] !== undefined) {
+                    output += mapping[string];
+                } else {
+                    output += string;
+                }
+            }
+
+            document.getElementById('resultText').innerText = output;
+        }
+    </script>
+</body>
+</html>
+ 
