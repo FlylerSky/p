@@ -213,7 +213,7 @@ function encode() {
 
   let encodedText = '';
   for (let i = 0; i < inputText.length; i++) {
-    const char = inputText[i].toUpperCase();
+    const char = inputText[i];
     encodedText += mapping[char] || char;
   }
 
