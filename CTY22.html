@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Công cụ mã hóa/giải mã</title>
+</head>
+<body>
+    <h1>Công cụ mã hóa/giải mã</h1>
+    <textarea id="input-text" placeholder="Nhập văn bản cần mã hóa/giải mã"></textarea>
+    <button id="encode-btn">Mã hóa</button>
+    <button id="decode-btn">Giải mã</button>
+    <textarea id="output-text" readonly></textarea>
+    <script>
+      const inputText = document.getElementById('input-text');
+      const outputText = document.getElementById('output-text');
+      const encodeBtn = document.getElementById('encode-btn');
+      const decodeBtn = document.getElementById('decode-btn');
+      
+      // Đối tượng lưu trữ các cặp mã hóa/giải mã
+      const codeMap = {
+        "A": "B",
+        "D": "E",
+        "AK": "FS",
+        // Thêm các cặp mã hóa khác vào đây
+      };
+      
+      // Hàm mã hóa
+      function encode(text) {
+        let result = '';
+        for (const word of text.split(' ')) {
+          let encodedWord = '';
+          if (codeMap[word]) {
+            encodedWord = codeMap[word]; // Nếu tìm thấy toàn bộ từ trong codeMap, thay thế luôn
+          } else {
+            for (const char of word) {
+              encodedWord += codeMap[char] || char;
+            }
+          }
+          result += encodedWord + ' ';
+        }
+        return result.trim();
+      }
+      
+      // Hàm giải mã
+      // ... (các phần còn lại của code giữ nguyên)
+      
+      // Hàm giải mã
+      function decode(text) {
+        let result = '';
+        for (const word of text.split(' ')) {
+          let decodedWord = '';
+          // Kiểm tra xem toàn bộ từ có tồn tại làm giá trị trong codeMap không
+          for (const key in codeMap) {
+            if (codeMap[key] === word) {
+              decodedWord = key;
+              break;
+            }
+          }
+          // Nếu không tìm thấy, mới duyệt từng ký tự
+          if (!decodedWord) {
+            for (const char of word) {
+              for (const key in codeMap) {
+                if (codeMap[key] === char) {
+                  decodedWord += key;
+                  break;
+                }
+              }
+              if (!decodedWord.endsWith(char)) {
+                decodedWord += char;
+              }
+            }
+          }
+          result += decodedWord + ' ';
+        }
+        return result.trim();
+      }
+    </script>
+    <style>
+      body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      h1 {
+        color: white;
+        margin-bottom: 20px;
+      }
+      
+      textarea {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        margin-right: 10px;
+      }
+      
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+</body>
+</html>

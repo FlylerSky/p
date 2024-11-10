@@ -14,7 +14,7 @@
    --link: rgba(60, 158, 0, 1);
    --radius: 10px;
    --pages: rgba(0, 25, 0, 1);
-   --titlecolor: /*linear-gradient(90deg, rgba(92, 101, 198, 0.5), rgba(50, 50, 50, 1))*/ rgba(255, 136, 138, 0.42) ;
+   --titlecolor: linear-gradient(90deg, rgba(92, 101, 198, 0.5), rgba(50, 50, 50, 1)) /*rgba(255, 136, 138, 0.42)*/ ;
 }
 
 /* CSS Chính */
@@ -32,6 +32,7 @@ a {
 }
 
 #head {
+  align-content: center;
    width: 100%;
    padding: 10px;
    justify-content: space-between;
@@ -43,7 +44,9 @@ a {
    box-shadow:0px 0px 50px 10px black;
    border-radius: var(--radius)
 }
-
+#logo{
+  align-content: center;
+}
 .ctn {
    width: 96%;
   height: auto;
@@ -70,5 +73,8 @@ a {
   width: 40px;
   border-radius: 100%;
   background: black;
+}
+.oneBlog {
+  margin-top: 5px
 }
 
