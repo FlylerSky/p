@@ -8,7 +8,7 @@
 
 /* Bảng điều khiển */
 :root {
-   --bg: black;
+   --bg: rgba(110, 0, 97, 0.87);
    --head: #222;
    --text: rgba(200, 200, 200, 1);
    --link: rgba(60, 158, 0, 1);
