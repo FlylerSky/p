@@ -8,7 +8,7 @@
 
 /* Bảng điều khiển */
 :root {
-   --bg: rgba(110, 0, 97, 0.87);
+   --bg: black;
    --head: #222;
    --text: rgba(200, 200, 200, 1);
    --link: rgba(60, 158, 0, 1);
@@ -42,7 +42,6 @@ a {
    display: flex;
    top: 0;
    box-shadow:0px 0px 50px 10px black;
-   border-radius: var(--radius)
 }
 #logo{
   align-content: center;
