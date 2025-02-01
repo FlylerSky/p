@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 /* Reset CSS */
 * {
    padding: 0;
@@ -14,7 +14,7 @@
    --link: rgba(60, 158, 0, 1);
    --radius: 10px;
    --pages: rgba(0, 25, 0, 1);
-   --titlecolor: linear-gradient(90deg, rgba(92, 101, 198, 0.5), rgba(50, 50, 50, 1)) /*rgba(255, 136, 138, 0.42)*/ ;
+   --titlecolor: linear-gradient(90deg, rgba(92, 101, 198, 0.5), rgba(50, 50, 50, 1))/*rgba(255, 136, 138, 0.92)*/ ;
 }
 
 /* CSS Chính */
@@ -42,6 +42,7 @@ a {
    display: flex;
    top: 0;
    box-shadow:0px 0px 50px 10px black;
+   border-bottom: solid white 0.1px;
 }
 #logo{
   align-content: center;

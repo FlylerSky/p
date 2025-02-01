@@ -1,1 +1,1 @@
-alert("Chào mừng")
+document.
